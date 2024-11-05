@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="p-4">
+    <ScrollView height="70%">
+        <StackLayout id="messageContainer" class="space-y-2">
+            <Label text="{{ messages }}" textWrap="true" class="text-base" />
+        </StackLayout>
+    </ScrollView>
+    <GridLayout rows="auto" columns="*, auto" class="mt-4">
+        <TextField col="0" hint="Type your message..." text="{{ userInput }}" class="p-2 border rounded-lg" />
+        <Button col="1" text="Send" tap="{{ onSendMessage }}" class="ml-2 bg-blue-500 text-white rounded-lg" />
+    </GridLayout>
+</StackLayout>

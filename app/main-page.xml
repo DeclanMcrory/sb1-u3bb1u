@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-gray-100">
+    <ActionBar title="OmniAI" class="bg-blue-600 text-white" />
+    
+    <GridLayout rows="*, auto">
+        <StackLayout row="0" class="p-4">
+            <Label text="OmniAI Assistant" class="text-2xl font-bold text-center mb-4" />
+            <Label text="Your AI Companion" class="text-lg text-center text-gray-600 mb-6" />
+            
+            <GridLayout rows="auto, auto" columns="*, *" class="mb-4">
+                <Button text="Chat" tap="{{ onChatTap }}" class="m-2 bg-blue-500 text-white rounded-lg" row="0" col="0" />
+                <Button text="Learn" tap="{{ onLearnTap }}" class="m-2 bg-green-500 text-white rounded-lg" row="0" col="1" />
+                <Button text="Assist" tap="{{ onAssistTap }}" class="m-2 bg-purple-500 text-white rounded-lg" row="1" col="0" />
+                <Button text="Settings" tap="{{ onSettingsTap }}" class="m-2 bg-gray-500 text-white rounded-lg" row="1" col="1" />
+            </GridLayout>
+
+            <ns:chat-interface height="60%" />
+        </StackLayout>
+    </GridLayout>
+</Page>
